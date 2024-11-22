@@ -31,7 +31,15 @@ const Hero = () => {
           your active life.
         </p>
 
-        <Button label='Shop now' iconURL={arrowRight} />
+        <Button 
+  label="Shop now" 
+  iconURL={arrowRight} 
+  onClick={() => {
+    document.getElementById('products')?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }} 
+/>
 
         <div className='flex justify-start items-start flex-wrap w-full mt-20 gap-16'>
           {statistics.map((stat, index) => (

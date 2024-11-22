@@ -30,13 +30,27 @@ const SpecialOffer = () => {
           nothing short of exceptional.
         </p>
         <div className='mt-11 flex flex-wrap gap-4'>
-          <Button label='Shop now' iconURL={arrowRight} />
-          <Button
-            label='Learn more'
-            backgroundColor='bg-white'
-            borderColor='border-slate-gray'
-            textColor='text-slate-gray'
-          />
+        <Button 
+  label="Shop now" 
+  iconURL={arrowRight} 
+  onClick={() => {
+    document.getElementById('products')?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }} 
+/>
+<Button
+  label="Learn more"
+  backgroundColor="bg-white"
+  borderColor="border-slate-gray"
+  textColor="text-slate-gray"
+  onClick={() => {
+    document.getElementById('about-us')?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }}
+/>
+
         </div>
       </div>
     </section>
